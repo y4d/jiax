@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>test</title>
+    <meta http-equiv=Content-Type content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+</head>
+<body>
+    <script type="text/javascript" src="src/y4d.js"></script>
+    <script type="text/javascript" src="src/jiax.js"></script>
+    <script type="text/javascript" src="src/event.js"></script>
+    <script type="text/javascript" src="src/observe.js"></script>
+    <script type="text/javascript" src="src/observe-array.js"></script>
+    <script type="text/javascript" src="src/style.js"></script>
+
+    <script type="text/javascript" src="yaxi/src/yaxi.js"></script>
+    <script type="text/javascript" src="yaxi/src/node.js"></script>
+
+    <script type="text/javascript">
+
+        var node = new yaxi.Node(null, {});
+
+        function convert(value) {
+        
+            return  value | 0;
+        }
+
+        var style = node.style;
+
+        var date = performance.now();
+
+        for (var i = 0; i < 10000; i++)
+        {
+            // style.left = i;
+            // style.top = i;
+            // style.width = i;
+            // style.height = i;
+
+            // convert(i);
+            // convert(i);
+            // convert(i);
+            // convert(i);
+        }
+
+        alert(performance.now() - date);
+
+    
+    </script>
+</body>
+</html>
